@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "home": "Säit Haapt",
+    "projects": "Mäi Projeten",
+    "contact": "Kontakt",
+    "fr": "Franséisch",
+    "gb": "Englesch",
+    "de": "Däitsch",
+    "lu": "Lëtzebuergesch"
+  },
+  "footer": {
+    "text": "Copyright © 2025 - Erausginn an gehost vun Julien Barrea. All Rechter virbehalen."
+  }
+}

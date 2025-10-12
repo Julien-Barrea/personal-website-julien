@@ -1,0 +1,103 @@
+{
+  "navbar": {
+    "title": "Julien Barrea",
+    "home": "Home",
+    "projects": "My Projects",
+    "contact": "Contact",
+    "fr": "French",
+    "gb": "English",
+    "de": "German",
+    "lu": "Luxembourgish"
+  },
+  "homepage":{
+    "title": "Junior Software Engineer",
+    "intro": "I am Julien Barrea, a passionate software developer with a huge eager for creating innovative solutions and discovering new languages and technologies. Explore my projects and feel free to reach out!",
+    "download": "Download PDF",
+    "download_note": "The pdf version may not be up to date. For the latest version, please contact me.",
+    "contact": {
+      "title":"Contact",
+      "address_street": "An Ditert 10C",
+      "address_city": "L-8076 Bertrange",
+      "email": "julien@barrea.lu",
+      "phone": "+352661816414",
+      "phone_formatted": "(+352) 661 81 64 14"
+    },
+    "languages": {
+      "title": "Languages",
+      "french": "French",
+      "english": "English"
+    },
+    "hobbies": {
+      "title": "Hobbies",
+      "escape_games": "Escape Games",
+      "indoor_skydive": "Indoor Skydive",
+      "travel": "Travel / City Trips"
+    },
+    "strengths": {
+      "title": "Strengths",
+      "meticulous": "Meticulous",
+      "punctual": "Punctual",
+      "pragmatic": "Pragmatic",
+      "conscientious": "Conscientious",
+      "structured": "Structured",
+      "problem_solving": "Problem Solving"
+    },
+    "education":{
+      "title": "Education",
+      "highschool": {
+        "degree": "CESS (BAC)",
+        "institution": "Institut Sainte-Marie Arlon (BE)",
+        "date": "2012 – 2017"
+      },
+      "bachelor1": {
+        "degree": "International Business",
+        "institution": "ZUYD Hogeschool Maastricht (NL)",
+        "date": "2018 - 2019"
+      },
+      "bachelor2": {
+        "degree": "Bachelor in Computer Science – Application Development",
+        "institution": "Haute École Robert Schuman - Libramont (BE)",
+        "date": "2022 – 2025"
+      }
+    },
+    "experience":{
+      "title": "Professional Experience",
+      "lineheat":{
+        "role": "IT Solutions Sales Specialist",
+        "company": "Lineheart sàrl",
+        "date": "May 2020 – September 2022"
+      },
+      "arhs_intership":{
+        "role": "Internship - Full Stack Developer",
+        "company": "ARHS Spikeseed",
+        "date": "February 2025 – May 2025"
+      },
+      "arhs": {
+        "role": "Software Engineer",
+        "company": "ARHS Group - Part of Accenture",
+        "date": "August 2025 – Present"
+      }
+    },
+    "skills":{
+      "title": "Skills",
+      "environment": "Mastered Environments",
+      "projects":{
+        "title": "Notable Projects",
+        "project1": "A personal website to showcase my projects and skills, built with Angular and Bootstrap, featuring a responsive design and multi-language support;",
+        "project2": "Domain name management (websites, emails, private DNS);",
+        "project3": "Hosting websites on Lubuntu / Synology servers;",
+        "project4": "Various command line games (Hangman, Mastermind, Card games, ...);",
+        "project5": "Simple applications with graphical interfaces in C++ and C# (calculator, salary calculation, ...);",
+        "project6": "Minesweeper game in JavaFX with cross-platform installers;",
+        "project7": "Planning management web app powered by Java Spring MVC."
+      },
+      "tools": {
+        "title": "Mastered Technologies",
+        "subtitle": "Select a tool for more details"
+      }
+    }
+  },
+  "footer": {
+    "text": "Copyright © 2025 - Edited and hosted by Julien Barrea. All rights reserved."
+  }
+}

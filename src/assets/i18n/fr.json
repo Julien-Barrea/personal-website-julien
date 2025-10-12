@@ -1,0 +1,14 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "projects": "Mes Projets",
+    "contact": "Contact",
+    "fr": "Français",
+    "en": "Anglais",
+    "de": "Allemand",
+    "lu": "Luxembourgeois"
+  },
+  "footer": {
+    "text": "Copyright © 2025 - Édité et hébergé par Julien Barrea. Tous droits réservés."
+  }
+}
