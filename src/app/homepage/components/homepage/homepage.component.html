@@ -125,10 +125,10 @@
         </div>
       </div>
 
-      <div id="col-2" class="d-flex flex-column m-3 ps-md-4">
-        <div class="d-none d-md-block text-center m-3 fs-1 lh-base">{{ t('title') }}</div>
+      <div id="col-2" class="d-flex flex-column m-3 ps-md-4 overflow-auto">
+        <div class="d-none d-md-block text-center m-2 fs-1 lh-base">{{ t('title') }}</div>
 
-        <div class="my-4">
+        <div class="my-3">
           <div class="fs-2 text-primary mb-4 lh-sm">{{ t('education.title') }}</div>
           <div class="m-3">
             <div class="fs-4 lh-sm">{{ t('education.highschool.degree') }}</div>
@@ -147,7 +147,7 @@
           </div>
         </div>
 
-        <div class="my-4">
+        <div class="my-3">
           <div class="fs-2 text-primary mb-4 lh-sm">{{ t('experience.title') }}</div>
           <div class="m-3">
             <div class="fs-4 lh-sm">{{ t('experience.lineheat.role') }}</div>
@@ -166,7 +166,7 @@
           </div>
         </div>
 
-        <div class="my-4">
+        <div class="my-3">
           <div class="fs-2 text-primary mb-4 lh-sm">{{ t('skills.title') }}</div>
           <div class="m-2">
             <div class="fs-3 lh-sm">{{ t('skills.environment') }}</div>
@@ -200,8 +200,8 @@
                 <div class="row row-cols-2 row-cols-sm-3 row-cols-md-2 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-3">
                   @for(technology of technologies; track technology.name) {
                     <div class="col">
-                      <div class="w-100 d-flex flex-column align-items-center">
-                        <img class="w-100 img-thumbnail" onclick="open_modal(technology.name)"
+                      <div class="w-100 d-flex flex-column align-items-center btn btn-light p-2">
+                        <img class="w-100" onclick="open_modal(technology.name)"
                           src="assets/images/technologies/{{technology.name}}.svg" alt="Logo {{technology.title_short}}" title={{technology.title}}>
                         <span>{{technology.title_short}}</span>
                       </div>
