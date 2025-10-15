@@ -1,0 +1,66 @@
+<ng-container *transloco="let t; prefix: 'technology_modal'">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="modal-title fs-3 text-dark" id="exampleModalLabel">{{technology()?.title}}</div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3 d-flex justify-content-between">
+            <div class="text-secondary fs-6">{{t("level")}}</div>
+            <div>
+              @for(i of [1,2,3,4,5]; track i) {
+                <i class="bi bi-star{{ (i <= (technology()?.level || 0)) ?'-fill':''}} text-secondary px-1"></i>
+              }
+            </div>
+          </div>
+          <div class="my-3">
+            <div class="text-dark fs-5">{{t("description")}}</div>
+            <div>{{description}}</div>
+          </div>
+          <div class="my-3">
+            <div class="text-dark fs-5">{{t("skills")}}</div>
+            <div>
+              <ul>
+                @for(skill of skills; track skill) {
+                  <li>{{skill}}</li>
+                }
+              </ul>
+            </div>
+          </div>
+          <div class="my-3">
+            <div class="text-dark fs-5">{{t("projects")}}</div>
+            <div>
+              <ul>
+                @for(project of projects; track project) {
+                  <li>{{project}}</li>
+                }
+              </ul>
+            </div>
+          </div>
+          <div class="my-3">
+            <div class="text-dark fs-5">{{t("linked_technologies")}}</div>
+            <div class="container-fluid m-3 mx-auto">
+              <div class="row row-cols-3 row-cols-md-4 g-3">
+                @for(technology of technology()?.related_technologies; track technology.name) {
+                  <div class="col">
+                    <button type="button" class="btn btn-light p-2 w-100 d-flex flex-column align-items-center"
+                     (click)=setTechnology(technology)>
+                      <img class="w-100" src="assets/images/technologies/{{technology.name}}.svg"
+                      alt="Logo {{technology.title_short}}" title={{technology.title}}>
+                      <span>{{technology.title_short}}</span>
+                    </button>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary text-white" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

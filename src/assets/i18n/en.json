@@ -97,6 +97,13 @@
       }
     }
   },
+  "technology_modal": {
+    "description": "Description",
+    "skills": "Skills",
+    "projects": "Projects",
+    "level": "Proficiency Level",
+    "linked_technologies": "Linked Technologies"
+  },
   "footer": {
     "text": "Copyright © 2025 - Edited and hosted by Julien Barrea. All rights reserved."
   }

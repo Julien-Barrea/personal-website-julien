@@ -3,7 +3,7 @@
     <div class="text-center mt-3 mb-5 fs-1 d-md-none lh-sm">{{ t('title') }}</div>
     <div class="d-flex flex-column align-items-center flex-md-row align-items-md-start">
 
-      <div id="col-1" class="mw-375px bg-light rounded d-flex flex-column m-3 p-3">
+      <div id="col-1" class="mw-375px bg-light rounded d-flex flex-column m-3 p-3 shadow">
         <img src="assets/images/julien_photo.jpg"
           class="rounded-circle w-100 my-3 p-2" alt="Photo of Julien Barrea">
 
@@ -27,7 +27,7 @@
                 <mat-icon >alternate_email</mat-icon>
               </div>
               <div class="col-10">
-                <a class="link" href="mailto:{{t('contact.email')}}">
+                <a class="link link-secondary" href="mailto:{{t('contact.email')}}">
                   {{ t("contact.email") }}
                 </a>
               </div>
@@ -37,7 +37,7 @@
                 <mat-icon >call</mat-icon>
               </div>
               <span class="col-10">
-                <a class="link" href="tel:{{t('contact.phone_formatted')}}">
+                <a class="link link-secondary" href="tel:{{t('contact.phone_formatted')}}">
                   {{ t("contact.phone_formatted") }}
                 </a>
               </span>
@@ -118,7 +118,7 @@
         </div>
 
         <div class="mb-3 pt-5 mt-auto">
-          <a class="btn btn-primary w-100 px-3" href="../downloads/barrea_julien_cv.pdf">{{t('download')}}</a>
+          <a class="btn btn-secondary w-100 px-3 text-white" href="../downloads/barrea_julien_cv.pdf">{{t('download')}}</a>
           <div class="text-center fst-italic small">
             {{t('download_note')}}
           </div>
@@ -126,10 +126,10 @@
       </div>
 
       <div id="col-2" class="d-flex flex-column m-3 ps-md-4 overflow-auto">
-        <div class="d-none d-md-block text-center m-2 fs-1 lh-base">{{ t('title') }}</div>
+        <div class="d-none d-md-block text-center m-2 fs-1 lh-base text-dark">{{ t('title') }}</div>
 
         <div class="my-3">
-          <div class="fs-2 text-primary mb-4 lh-sm">{{ t('education.title') }}</div>
+          <div class="fs-2 text-dark mb-4 lh-sm">{{ t('education.title') }}</div>
           <div class="m-3">
             <div class="fs-4 lh-sm">{{ t('education.highschool.degree') }}</div>
             <div class="fw-light fst-italic">{{ t('education.highschool.institution') }}</div>
@@ -148,7 +148,7 @@
         </div>
 
         <div class="my-3">
-          <div class="fs-2 text-primary mb-4 lh-sm">{{ t('experience.title') }}</div>
+          <div class="fs-2 text-dark mb-4 lh-sm">{{ t('experience.title') }}</div>
           <div class="m-3">
             <div class="fs-4 lh-sm">{{ t('experience.lineheat.role') }}</div>
             <div class="fw-light fst-italic">{{ t('experience.lineheat.company') }}</div>
@@ -167,7 +167,7 @@
         </div>
 
         <div class="my-3">
-          <div class="fs-2 text-primary mb-4 lh-sm">{{ t('skills.title') }}</div>
+          <div class="fs-2 text-dark mb-4 lh-sm">{{ t('skills.title') }}</div>
           <div class="m-2">
             <div class="fs-3 lh-sm">{{ t('skills.environment') }}</div>
             <ul class="m-3">
@@ -200,11 +200,14 @@
                 <div class="row row-cols-2 row-cols-sm-3 row-cols-md-2 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6 g-3">
                   @for(technology of technologies; track technology.name) {
                     <div class="col">
-                      <div class="w-100 d-flex flex-column align-items-center btn btn-light p-2">
-                        <img class="w-100" onclick="open_modal(technology.name)"
-                          src="assets/images/technologies/{{technology.name}}.svg" alt="Logo {{technology.title_short}}" title={{technology.title}}>
+                      <button type="button" class="btn btn-light p-2 w-100 d-flex flex-column align-items-center shadow-sm"
+                      data-bs-toggle="modal" data-bs-target="#exampleModal" (click)=setSelectedTechno(technology)>
+                      <!-- <div class="w-100 d-flex flex-column align-items-center btn btn-light p-2"> -->
+                        <img class="w-100" src="assets/images/technologies/{{technology.name}}.svg"
+                        alt="Logo {{technology.title_short}}" title={{technology.title}}>
                         <span>{{technology.title_short}}</span>
-                      </div>
+                      <!-- </div> -->
+                      </button>
                     </div>
                   }
                 </div>
@@ -216,4 +219,6 @@
       </div>
     </div>
   </app-page>
+
+  <app-modal-technology [technology]=selectedTechno()></app-modal-technology>
 </ng-container>

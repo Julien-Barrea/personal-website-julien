@@ -1,16 +1,41 @@
-<div class="card" style="width: 18rem;">
+
+
+<div class="card">
+
+  @if(project().images !== undefined){
+    <div id="carousel_{{project().name}}" class="carousel slide card-img-top">
+      <div class="carousel-inner">
+        @for(image of project().images; track $index){
+          <div class="carousel-item {{$index==0?'active':''}}">
+            <img src={{image}} class="d-block w-100" alt="...">
+          </div>
+        }
+      </div>
+      <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carousel_' + project().name" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carousel_' + project().name" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  }
+
   <div class="card-body">
-    <h5 class="card-title">Minesweeper</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Java - JavaFX</h6>
-    <p class="card-text">
-      My very first graphical project using Java. I used the JavaFX library to
-      create a Minesweeper game that works in the same way and with the same rules
-      as the classic Minesweeper. This program can be installed on any machine
-      running Windows with an x64 processor, or MacOS with an M-series (ARM) processor,
-      without any prerequisites thanks to the following installers.
-    </p>
-    <a href="#" class="card-link">Download MacOS Installer</a>
-    <a href="#" class="card-link">Download Windows Installer</a>
-    <a href="#" class="card-link">See on Github</a>
+    <div class="card-title fs-4">{{project().name}}</div>
+    <h6 class="card-subtitle mb-2 text-muted fs-6">{{project().technology}}</h6>
+    <p class="card-text">{{description}}</p>
+    <div class="container">
+      <div class="row row-cols-1 g-2">
+        @for (link of project().links; track link.url) {
+          <div class="col">
+            <div class="btn btn-secondary text-white w-100">
+              <a class="text-decoration-none text-white" href={{link.url}}>{{link.name}}</a>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
   </div>
 </div>

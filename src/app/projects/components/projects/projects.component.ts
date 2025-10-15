@@ -2,6 +2,7 @@
 import { Component } from "@angular/core";
 import { PageComponent } from "../../../shared/components/page/page.component";
 import { ProjectCardComponent } from "../project-card/project-card.component";
+import { PROJECTS } from "../../data/projects";
 
 @Component({
   standalone: true,
@@ -11,5 +12,5 @@ import { ProjectCardComponent } from "../project-card/project-card.component";
   imports: [ PageComponent, ProjectCardComponent ]
 })
 export class ProjectsComponent{
-
+  projects = PROJECTS
 }
